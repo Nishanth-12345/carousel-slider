@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+.carousel-container {
+  background-color: black;
+  padding: 40px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-container h1,
+p {
+  text-align: center;
+  margin-bottom: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.heading {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.sub-title {
+  font-size: 28px;
+  font-weight: 400;
+  padding: 0 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.carousel-container::before,
+.carousel-container::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 264px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4) 37%, rgba(0, 0, 0, 0));
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4) 37%, rgba(0, 0, 0, 0));
+}
+
+@media (max-width:928px) {
+  .heading {
+    font-size: 66px;
+  }
+
+  .sub-title {
+    font-size: 28px;
+  }
+
+  .carousel-container::before,
+  .carousel-container::after {
+    width: 190px;
+  }
+}
+
+@media (max-width:768px) {
+  .heading {
+    font-size: 50px;
+  }
+
+  .sub-title {
+    font-size: 24px;
+  }
+
+  .carousel-container::before,
+  .carousel-container::after {
+    width: 96px;
+  }
+}
+
+@media (max-width:600px) {
+  .heading {
+    font-size: 46px;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 408px) {
+  .heading {
+    font-size: 36px;
+  }
+
+  .sub-title {
+    font-size: 16px;
+  }
+
+  .carousel-container::before,
+  .carousel-container::after {
+    width: 66px;
+  }
+}
